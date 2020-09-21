@@ -55,7 +55,7 @@ function writePassword() {
 }
 
 function generatePassword() {
-  return "x";
+  return "Your generated password will appear here.";
 }
 
 // Add event listener to generate button
