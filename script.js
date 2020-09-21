@@ -21,7 +21,7 @@ function writePassword() {
     // exiting the program since user didn't meet pw length requirement
     return 0;
   }
-  alert("This is where i am in the code.");
+
   // Section B
   pwUpperCase = confirm(
     "Would you like for your password to include upper case characters? Select OK for Yes or Cancel for NO"
