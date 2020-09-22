@@ -59,7 +59,21 @@ function generatePassword() {
   var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz".split("");
   var numbers = "0123456789".split("");
   var specialCharacters = ` !"#$%&'()*+,-./:;<=>?@[\]^_{|}~""`.split("");
+  var userChosenCharacters = [];
 
+  if (pwUpperCase == true) {
+    for (let i = 0; i < upperCaseLetters.length; i++) {
+      userChosenCharacters.push(upperCaseLetters[i]);
+    }
+    console.log(userChosenCharacters);
+  }
+
+  if (pwUpperCase == true) {
+    for (let i = 0; i < upperCaseLetters.length; i++) {
+      userChosenCharacters.push(upperCaseLetters[i]);
+    }
+    console.log(userChosenCharacters);
+  }
   return "Your generated password will appear here.";
 }
 
