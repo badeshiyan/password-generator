@@ -55,6 +55,11 @@ function writePassword() {
 }
 
 function generatePassword() {
+  var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz".split("");
+  var numbers = "0123456789".split("");
+  var specialCharacters = ` !"#$%&'()*+,-./:;<=>?@[\]^_{|}~""`.split("");
+
   return "Your generated password will appear here.";
 }
 
