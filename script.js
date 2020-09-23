@@ -8,21 +8,18 @@ var pwSpecialCharacters = false;
 
 // Write password to the #password input
 function writePassword() {
-  // section A
-  // prompt user to enter length of pw (variable and prompt)
+  // prompt user to enter length of generated password (variable and prompt)
   pwLength = prompt(
     "Please enter length of desired password. Ensure that it is between 8 - 128 characters."
   );
   // validate that value is between 8 - 128 (if else statement)
-  if (pwLength >= 8 && pwLength <= 128) {
-    alert("Your password meets the length requirement!");
-  } else {
+  if (pwLength < 8 || pwLength > 128) {
     alert("Your password must be between 8 - 128 characters!");
     // exiting the program since user didn't meet pw length requirement
     return 0;
   }
 
-  // Section B
+  // prompt user to select desired character type for generated password
   pwUpperCase = confirm(
     "Would you like for your password to include upper case characters? Select OK for Yes or Cancel for NO"
   );
@@ -35,6 +32,7 @@ function writePassword() {
   pwSpecialCharacters = confirm(
     "Would you like for your password to include special characters? Select OK for Yes or Cancel for NO"
   );
+  // validate that at least one of the character types has been selected
   if (
     pwUpperCase == false &&
     pwLowerCase == false &&
@@ -47,7 +45,8 @@ function writePassword() {
     // exiting the program since user didn't meet pw character type requirement
     return 0;
   }
-  // Section C
+
+  // generate password based on user selected criteria
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -63,16 +62,16 @@ function generatePassword() {
   var newPassword = [];
   var num = 0;
 
+  // include an upperCase character in the password if this character set has been selected by user
   if (pwUpperCase == true) {
     for (let i = 0; i < upperCaseLetters.length; i++) {
       userChosenCharacters.push(upperCaseLetters[i]);
     }
     num = Math.floor(Math.random() * upperCaseLetters.length);
     newPassword.push(upperCaseLetters[num]);
-    // console.log(num);
-    // console.log(upperCaseLetters[num]);
   }
 
+  // include an lowerCase character in the password if this character set has been selected by user
   if (pwLowerCase == true) {
     for (let i = 0; i < lowerCaseLetters.length; i++) {
       userChosenCharacters.push(lowerCaseLetters[i]);
@@ -81,6 +80,7 @@ function generatePassword() {
     newPassword.push(lowerCaseLetters[num]);
   }
 
+  // include a numerical character in the password if this character set has been selected by user
   if (pwNumbers == true) {
     for (let i = 0; i < numbers.length; i++) {
       userChosenCharacters.push(numbers[i]);
@@ -89,6 +89,7 @@ function generatePassword() {
     newPassword.push(numbers[num]);
   }
 
+  // include a special character in the password if this character set has been selected by user
   if (pwSpecialCharacters == true) {
     for (let i = 0; i < specialCharacters.length; i++) {
       userChosenCharacters.push(specialCharacters[i]);
@@ -96,20 +97,25 @@ function generatePassword() {
     num = Math.floor(Math.random() * specialCharacters.length);
     newPassword.push(specialCharacters[num]);
   }
-  // console.log(newPassword);
+
+  // complete the password with characters from the user selected character sets
   for (let i = newPassword.length; i < pwLength; i++) {
     num = Math.floor(Math.random() * userChosenCharacters.length);
     newPassword.push(userChosenCharacters[num]);
   }
-  // console.log(newPassword);
+
+  // randomly sort the elements of the password array
   newPassword.sort(function (a, b) {
     return 0.5 - Math.random();
   });
   console.log(newPassword);
 
+  // convert password array into a string
   var finalPassword = newPassword.join("");
   console.log(finalPassword);
-  return "Your generated password will appear here.";
+
+  // return generated password that matches the selected criteria
+  return finalPassword;
 }
 
 // Add event listener to generate button
