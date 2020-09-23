@@ -26,7 +26,7 @@ function writePassword() {
   pwUpperCase = confirm(
     "Would you like for your password to include upper case characters? Select OK for Yes or Cancel for NO"
   );
-  pwLowerCase = confirm(
+  /*pwLowerCase = confirm(
     "Would you like for your password to include lower case characters? Select OK for Yes or Cancel for NO"
   );
   pwNumbers = confirm(
@@ -46,7 +46,7 @@ function writePassword() {
     );
     // exiting the program since user didn't meet pw character type requirement
     return 0;
-  }
+  }*/
   // Section C
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -61,17 +61,24 @@ function generatePassword() {
   var specialCharacters = ` !"#$%&'()*+,-./:;<=>?@[\]^_{|}~""`.split("");
   var userChosenCharacters = [];
   var newPassword = [];
+  var num = 0;
 
   if (pwUpperCase == true) {
     for (let i = 0; i < upperCaseLetters.length; i++) {
       userChosenCharacters.push(upperCaseLetters[i]);
     }
+    var num = Math.floor(Math.random() * upperCaseLetters.length);
+    newPassword.push(upperCaseLetters[num]);
+    console.log(num);
+    console.log(upperCaseLetters[num]);
   }
 
   if (pwLowerCase == true) {
     for (let i = 0; i < lowerCaseLetters.length; i++) {
       userChosenCharacters.push(lowerCaseLetters[i]);
     }
+    var num = Math.floor(Math.random() * lowerCaseLetters.length);
+    newPassword.push(lowerCaseLetters[num]);
   }
 
   if (pwNumbers == true) {
@@ -85,6 +92,7 @@ function generatePassword() {
       userChosenCharacters.push(specialCharacters[i]);
     }
   }
+
   console.log(userChosenCharacters);
   return "Your generated password will appear here.";
 }
