@@ -2,13 +2,11 @@
 
 ## Overview:
 
-As we all continues to battle with unprecedented effects of COVID-19, the number of the world's workforce that has to now work remotely continues to rise. As these numbers increase, so does the opportunity for cybercrimes. It is imperative that those working remotely utilize enhanced security efforts to keep their sensitive information from being compromised.
+As we all continue to battle with the unprecedented effects of COVID-19, the number of the world's workforce who are now employed remotely continues to rise. As these numbers increase, so does the opportunity for cybercrimes. It is imperative that those working remotely utilize enhanced security efforts to keep their sensitive information from being compromised.
 
-Upon review of this project, the reader will find the creation of a dynamic password generating application. With the primary use of javascript, the developer implemented javascript and other coding concepts including the usage of arrays, math.random,
+Upon review of this project, the reader will find the creation of a dynamic password generating application. With the primary use of javascript, the developer implemented javascript and other coding concepts to achieve this effort, including the usage of arrays, for loops and functions (math.random, math.floor, sort, etc.). Based on the provided requirements, the developer ensured that the user can successully enter the desired length and character types into the web application to generate a specific password per the submitted inputs.
 
-the editing and overall improvement of the submitted, client's source code. Although the submitted code generates the intended web page, the changes made to the html document allowed for a more effective and optimized code. Please note that in addition to the optimization of the html source code, the redundancies of the css style sheet were removed as well; the css included repeated information that was, again, deleted to make for a more efficient css.
-
-This effort includes HTML and CSS basics that we've covered thus far in our four class sessions. These include the usage and employment of semantic HTML elements when needed (as opposed to div or more generic tags), the organization and consolidation of redundant CSS properties and its structure, the inclusion of code comments that were not initially included, among other coding basics.
+Please find additional information regarding this javascript project below.
 
 ## Deployed Webpage Link
 
@@ -34,7 +32,7 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/passwor
 
 2. MDN web docs: https://developer.mozilla.org/en-US/
 
-3.
+3. Stack Overflow: https://stackoverflow.com/
 
 ## MIT License
 
