@@ -16,9 +16,7 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/passwor
 
 ## Screenshots of Deployed Webpage:
 
-![Horiseon Online Marketing Agency](/Users/adebamboadeshiyan/Desktop/gt-pt/Homework/password-generator/images/pwscreenshot6.png)
-
-![Horiseon Online Marketing Agency](assets/images/screenshot2.png)
+![Adeshiyan Password Generator 1](./images/pwscreenshot1.png)
 
 ## Credits
 
