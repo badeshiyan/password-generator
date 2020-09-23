@@ -47,7 +47,7 @@ function writePassword() {
   }
 
   // generate password based on user selected criteria
-  var password = generatePassword();
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
