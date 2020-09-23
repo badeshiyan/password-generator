@@ -60,6 +60,7 @@ function generatePassword() {
   var numbers = "0123456789".split("");
   var specialCharacters = ` !"#$%&'()*+,-./:;<=>?@[\]^_{|}~""`.split("");
   var userChosenCharacters = [];
+  var genPassword = [];
 
   if (pwUpperCase == true) {
     for (let i = 0; i < upperCaseLetters.length; i++) {
@@ -88,6 +89,7 @@ function generatePassword() {
     }
     console.log(userChosenCharacters);
   }
+
   return "Your generated password will appear here.";
 }
 
