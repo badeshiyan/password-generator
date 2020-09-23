@@ -26,7 +26,7 @@ function writePassword() {
   pwUpperCase = confirm(
     "Would you like for your password to include upper case characters? Select OK for Yes or Cancel for NO"
   );
-  /*pwLowerCase = confirm(
+  pwLowerCase = confirm(
     "Would you like for your password to include lower case characters? Select OK for Yes or Cancel for NO"
   );
   pwNumbers = confirm(
@@ -46,7 +46,7 @@ function writePassword() {
     );
     // exiting the program since user didn't meet pw character type requirement
     return 0;
-  }*/
+  }
   // Section C
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -67,17 +67,17 @@ function generatePassword() {
     for (let i = 0; i < upperCaseLetters.length; i++) {
       userChosenCharacters.push(upperCaseLetters[i]);
     }
-    var num = Math.floor(Math.random() * upperCaseLetters.length);
+    num = Math.floor(Math.random() * upperCaseLetters.length);
     newPassword.push(upperCaseLetters[num]);
-    console.log(num);
-    console.log(upperCaseLetters[num]);
+    // console.log(num);
+    // console.log(upperCaseLetters[num]);
   }
 
   if (pwLowerCase == true) {
     for (let i = 0; i < lowerCaseLetters.length; i++) {
       userChosenCharacters.push(lowerCaseLetters[i]);
     }
-    var num = Math.floor(Math.random() * lowerCaseLetters.length);
+    num = Math.floor(Math.random() * lowerCaseLetters.length);
     newPassword.push(lowerCaseLetters[num]);
   }
 
@@ -85,15 +85,30 @@ function generatePassword() {
     for (let i = 0; i < numbers.length; i++) {
       userChosenCharacters.push(numbers[i]);
     }
+    num = Math.floor(Math.random() * numbers.length);
+    newPassword.push(numbers[num]);
   }
 
   if (pwSpecialCharacters == true) {
     for (let i = 0; i < specialCharacters.length; i++) {
       userChosenCharacters.push(specialCharacters[i]);
     }
+    num = Math.floor(Math.random() * specialCharacters.length);
+    newPassword.push(specialCharacters[num]);
   }
+  // console.log(newPassword);
+  for (let i = newPassword.length; i < pwLength; i++) {
+    num = Math.floor(Math.random() * userChosenCharacters.length);
+    newPassword.push(userChosenCharacters[num]);
+  }
+  // console.log(newPassword);
+  newPassword.sort(function (a, b) {
+    return 0.5 - Math.random();
+  });
+  console.log(newPassword);
 
-  console.log(userChosenCharacters);
+  var finalPassword = newPassword.join("");
+  console.log(finalPassword);
   return "Your generated password will appear here.";
 }
 
