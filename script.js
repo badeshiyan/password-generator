@@ -8,14 +8,14 @@ var pwSpecialCharacters = false;
 
 // Write password to the #password input
 function writePassword() {
-  // prompt user to enter length of generated password (variable and prompt)
+  // prompt user to enter length of generated password
   pwLength = prompt(
     "Please enter length of desired password. Ensure that it is between 8 - 128 characters."
   );
-  // validate that value is between 8 - 128 (if else statement)
+  // validate that value is between 8 - 128
   if (pwLength < 8 || pwLength > 128) {
     alert("Your password must be between 8 - 128 characters!");
-    // exiting the program since user didn't meet pw length requirement
+    // exiting the program since user didn't meet password length requirement
     return 0;
   }
 
@@ -42,7 +42,7 @@ function writePassword() {
     alert(
       "Your password must include one of the four previous character requirements!"
     );
-    // exiting the program since user didn't meet pw character type requirement
+    // exiting the program since user didn't meet password character type requirement
     return 0;
   }
 
