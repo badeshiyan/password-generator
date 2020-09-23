@@ -60,36 +60,32 @@ function generatePassword() {
   var numbers = "0123456789".split("");
   var specialCharacters = ` !"#$%&'()*+,-./:;<=>?@[\]^_{|}~""`.split("");
   var userChosenCharacters = [];
-  var genPassword = [];
+  var newPassword = [];
 
   if (pwUpperCase == true) {
     for (let i = 0; i < upperCaseLetters.length; i++) {
       userChosenCharacters.push(upperCaseLetters[i]);
     }
-    console.log(userChosenCharacters);
   }
 
   if (pwLowerCase == true) {
     for (let i = 0; i < lowerCaseLetters.length; i++) {
       userChosenCharacters.push(lowerCaseLetters[i]);
     }
-    console.log(userChosenCharacters);
   }
 
   if (pwNumbers == true) {
     for (let i = 0; i < numbers.length; i++) {
       userChosenCharacters.push(numbers[i]);
     }
-    console.log(userChosenCharacters);
   }
 
   if (pwSpecialCharacters == true) {
     for (let i = 0; i < specialCharacters.length; i++) {
       userChosenCharacters.push(specialCharacters[i]);
     }
-    console.log(userChosenCharacters);
   }
-
+  console.log(userChosenCharacters);
   return "Your generated password will appear here.";
 }
 
